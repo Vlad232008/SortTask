@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
     private val random = Random()
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         return random.nextInt(1000)
     }
 
-    var arrayList: MutableList<Int> = mutableListOf()
+    private var arrayList: MutableList<Int> = mutableListOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -43,7 +44,8 @@ class MainActivity : AppCompatActivity() {
             Log.d("MyLog", "Глупая сортировка пройдена за: $totalTime")
             val aBuilder = StringBuilder()
             for ((counter, i) in (1..arrayList.size).withIndex()) {
-                if (i == arrayList.size) aBuilder.append("${arrayList[counter]}")
+                if (i == arrayList.size)
+                    aBuilder.append("${arrayList[counter]}")
                 else aBuilder.append("${arrayList[counter]},")
             }
             tvText.text = aBuilder.toString()
