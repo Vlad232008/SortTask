@@ -3,12 +3,10 @@ package com.example.sorttask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.util.TimingLogger
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import java.util.*
-import java.util.Collections.swap
 
 class MainActivity : AppCompatActivity() {
     private val random = Random()
@@ -42,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             val startTime = System.nanoTime()
             arrayList = foolSortAlgorithm(arrayList)
             val totalTime = System.nanoTime() - startTime
-            Log.d("MyLog", totalTime.toString())
+            Log.d("MyLog", "Глупая сортировка пройдена за: $totalTime")
             val aBuilder = StringBuilder()
             for ((counter, i) in (1..arrayList.size).withIndex()) {
                 if (i == arrayList.size) aBuilder.append("${arrayList[counter]}")
@@ -55,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             val startTime = System.nanoTime()
             arrayList = bubbleSortFromFool(arrayList)
             val totalTime = System.nanoTime() - startTime
-            Log.d("MyLog", totalTime.toString())
+            Log.d("MyLog", "Пузырьковая сортировка пройдена за: $totalTime")
             val aBuilder = StringBuilder()
             for ((counter, i) in (1..arrayList.size).withIndex()) {
                 if (i == arrayList.size) aBuilder.append("${arrayList[counter]}")
@@ -68,7 +66,7 @@ class MainActivity : AppCompatActivity() {
             val startTime = System.nanoTime()
             arrayList = cocktailSortAlgorithm(arrayList)
             val totalTime = System.nanoTime() - startTime
-            Log.d("MyLog", totalTime.toString())
+            Log.d("MyLog", "Шейкерная сортировка пройдена за: $totalTime")
             val aBuilder = StringBuilder()
             for ((counter, i) in (1..arrayList.size).withIndex()) {
                 if (i == arrayList.size) aBuilder.append("${arrayList[counter]}")
@@ -81,7 +79,7 @@ class MainActivity : AppCompatActivity() {
             val startTime = System.nanoTime()
             arrayList = combSortAlgorithm(arrayList)
             val totalTime = System.nanoTime() - startTime
-            Log.d("MyLog", totalTime.toString())
+            Log.d("MyLog", "Сортировка вставками пройдена за: $totalTime")
             val aBuilder = StringBuilder()
             for ((counter, i) in (1..arrayList.size).withIndex()) {
                 if (i == arrayList.size) aBuilder.append("${arrayList[counter]}")
@@ -94,7 +92,7 @@ class MainActivity : AppCompatActivity() {
             val startTime = System.nanoTime()
             arrayList = shellSort(arrayList)
             val totalTime = System.nanoTime() - startTime
-            Log.d("MyLog", totalTime.toString())
+            Log.d("MyLog", "Сортировка Шелла пройдена за: $totalTime")
             val aBuilder = StringBuilder()
             for ((counter, i) in (1..arrayList.size).withIndex()) {
                 if (i == arrayList.size) aBuilder.append("${arrayList[counter]}")
