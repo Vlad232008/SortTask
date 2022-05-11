@@ -4,26 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="8dp"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tvArray"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:inputType="textMultiLine"
-        android:text="TextView"
+        android:inputType="textAutoComplete"
+        android:hint="Массив"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/etCount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/etCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:ems="10"
         android:hint="Введите количество"
         android:inputType="number"
@@ -34,6 +37,7 @@
         android:id="@+id/btnCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:text="Рассчитать"
         app:layout_constraintBottom_toTopOf="@+id/btnThree"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,64 +47,53 @@
         android:id="@+id/btnOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="8dp"
         android:text="Глупая"
         android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/btnFour"
-        app:layout_constraintEnd_toEndOf="@+id/btnFour"
-        app:layout_constraintStart_toStartOf="@+id/btnFour" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="8dp"
         android:text="Пузырьковая"
         android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/btnFive"
-        app:layout_constraintEnd_toEndOf="@+id/btnFive"
-        app:layout_constraintStart_toStartOf="@+id/btnFive" />
+        app:layout_constraintEnd_toStartOf="@+id/btnThree"
+        app:layout_constraintStart_toEndOf="@+id/btnOne" />
 
     <Button
         android:id="@+id/btnThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="8dp"
         android:text="Шейкерная"
         android:textSize="10sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnSix"
-        app:layout_constraintEnd_toEndOf="@+id/btnSix"
-        app:layout_constraintStart_toStartOf="@+id/btnSix" />
+        app:layout_constraintBottom_toTopOf="@+id/btnFive"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btnFour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="8dp"
         android:text="Расческой"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnTwo"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnFive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="8dp"
         android:text="Вставками"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnSix"
-        app:layout_constraintStart_toEndOf="@+id/btnFour" />
-
-    <Button
-        android:id="@+id/btnSix"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Слиянием"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnTwo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
